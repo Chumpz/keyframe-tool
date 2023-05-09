@@ -20,7 +20,7 @@ def display(window_name):
     if cmds.window(window_name, exists=True):
         cmds.deleteUI(window_name)
     
-    window = cmds.window(window_name, title="Keyframe Tool Mini", width=270)
+    window = cmds.window(window_name, title="Keyframe Tool Mini", width=270, height=80)
     column_layout = cmds.columnLayout(parent=window, adjustableColumn=True)
     on_twos_cb = cmds.checkBox(parent=column_layout, label="Add frames on 2's")                                                
     skip_existing_cb = cmds.checkBox(label="Skip existing frames", parent=column_layout)
